@@ -15,7 +15,7 @@ body {
     position: absolute;
     left: 50%;
     top: 60%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
 }
 
 .main-box label {
@@ -32,7 +32,7 @@ body {
     text-transform: uppercase;
     color: #0984e3;
     cursor: pointer;
-    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
 }
 
@@ -57,7 +57,7 @@ body {
     display: none;
 }
 
-#check:checked ~ label::before {
+#check:checked~label::before {
     opacity: 1;
     pointer-events: auto;
 }
@@ -74,7 +74,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 35px;
-    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
@@ -90,7 +90,7 @@ body {
     background: #fff;
 }
 
-#check:checked ~ .icons {
+#check:checked~.icons {
     opacity: 1;
     pointer-events: auto;
     top: -84px;

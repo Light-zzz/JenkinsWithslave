@@ -30,7 +30,7 @@ body {
     background: #fff;
     border-radius: 50%;
     margin: 0 5px;
-    box-shadow:  0 5px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .icon-image img {
@@ -52,7 +52,7 @@ body {
     bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow:  0 5px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     z-index: 0;
     transition: transform 0.5s, z-index 0s, left 0.5s;
@@ -137,11 +137,11 @@ body {
     margin: -3px 0 5px 0;
 }
 
-.last .hover-image{
+.last .hover-image {
     transition: none;
 }
 
-.last:hover .hover-image{
+.last:hover .hover-image {
     transition: none;
 }
 

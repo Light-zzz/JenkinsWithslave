@@ -21,7 +21,7 @@ body {
     background: #fff;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card .title {
@@ -44,9 +44,9 @@ body {
     transition: all 0.25 ease;
 }
 
-#one:checked ~ label.first,
-#two:checked ~ label.second,
-#three:checked ~ label.third {
+#one:checked~label.first,
+#two:checked~label.second,
+#three:checked~label.third {
     border-color: #8e49e8;
     background: #d5bbf7;
 }
@@ -70,12 +70,12 @@ body {
     border: 5px solid transparent;
     display: inline-block;
     transition: all 0.25s ease;
-    box-shadow: inset -4px -4px 10px rgba(0,0,0,0.2);
+    box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#one:checked ~ label.first .circle,
-#two:checked ~ label.second .circle,
-#three:checked ~ label.third .circle {
+#one:checked~label.first .circle,
+#two:checked~label.second .circle,
+#three:checked~label.third .circle {
     border-color: #8e49e8;
     background: #fff;
 }

@@ -25,11 +25,12 @@ section .dots span {
     opacity: 0;
 }
 
-@keyframes animate{
-    0%{
+@keyframes animate {
+    0% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }

@@ -23,7 +23,7 @@ body {
     background: #fff;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .container header {
@@ -60,7 +60,7 @@ body {
 }
 
 .input-box input:focus {
-    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .form .column {
@@ -92,7 +92,8 @@ body {
 }
 
 .gender input {
-    accent-color: rgb(130, 106, 251);;
+    accent-color: rgb(130, 106, 251);
+    ;
 }
 
 .form :where(.gender input, .gender label) {
@@ -140,6 +141,7 @@ body {
     .form .column {
         flex-wrap: wrap;
     }
+
     .form :where(.gender-option, .gender) {
         row-gap: 15px;
     }

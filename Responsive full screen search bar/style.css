@@ -23,7 +23,7 @@ body {
     background: #fff;
     margin: 0 20px;
     border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .input-box i,
@@ -71,13 +71,16 @@ body {
         height: 66px;
         margin: 0 8px;
     }
+
     .input-box i {
         left: 12px;
         font-size: 25px;
     }
+
     .input-box input {
         padding: 0 112px 0 50px;
     }
+
     .input-box .button {
         right: 12px;
         font-size: 14px;

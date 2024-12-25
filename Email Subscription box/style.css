@@ -23,7 +23,7 @@ body {
     width: 100%;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
 }
 
 .wrapper .top {
@@ -62,7 +62,7 @@ body {
 
 .wrapper .bottom .input-box {
     width: 100%;
-    height: 45px;  
+    height: 45px;
     margin: 15px 0 10px 0;
 }
 
@@ -91,7 +91,7 @@ body {
     color: #fff;
     letter-spacing: 1px;
     cursor: pointer;
-} 
+}
 
 .wrapper .bottom input[type="submit"]:hover {
     background: #1414b8;

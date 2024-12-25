@@ -42,7 +42,8 @@ nav label {
 }
 
 nav label:hover {
-    background: rgba(142, 68, 175, 0.3);;
+    background: rgba(142, 68, 175, 0.3);
+    ;
 }
 
 nav label i {
@@ -60,27 +61,27 @@ nav label i {
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-#home:checked ~ nav label.home,
-#blog:checked ~ nav label.blog,
-#code:checked ~ nav label.code,
-#help:checked ~ nav label.help,
-#user:checked ~ nav label.user {
+#home:checked~nav label.home,
+#blog:checked~nav label.blog,
+#code:checked~nav label.code,
+#help:checked~nav label.help,
+#user:checked~nav label.user {
     color: #fff;
 }
 
-#blog:checked ~ nav .slider {
+#blog:checked~nav .slider {
     left: 20%;
 }
 
-#code:checked ~ nav .slider {
+#code:checked~nav .slider {
     left: 40%;
 }
 
-#help:checked ~ nav .slider {
+#help:checked~nav .slider {
     left: 60%;
 }
 
-#user:checked ~ nav .slider {
+#user:checked~nav .slider {
     left: 80%;
 }
 

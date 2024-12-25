@@ -11,7 +11,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     height: 55px;
     background: #2980b9;
     padding: 0 30px;
@@ -40,7 +40,7 @@
     transition: all 0.3s ease;
 }
 
-#check:checked ~ .background{
+#check:checked~.background {
     opacity: 1;
     pointer-events: auto;
 }
@@ -49,7 +49,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     max-width: 450px;
     width: 100%;
     background: #fff;
@@ -62,18 +62,18 @@
     z-index: 5;
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50% , -50%) scale(0.97);
+    transform: translate(-50%, -50%) scale(0.97);
     transition: all 0.3s ease;
 }
 
-#check{
+#check {
     display: none;
 }
 
-#check:checked ~ .background .alert-box{
+#check:checked~.background .alert-box {
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-50% , -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .alert-box .icon {

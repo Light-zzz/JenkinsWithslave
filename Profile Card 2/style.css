@@ -37,7 +37,8 @@ body {
     cursor: pointer;
 }
 
-.content .box .share, .cancel {
+.content .box .share,
+.cancel {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -58,11 +59,11 @@ body {
     opacity: 1;
 }
 
-#check:checked ~ .box .share {
+#check:checked~.box .share {
     opacity: 0;
 }
 
-#check:checked ~ .box .cancel {
+#check:checked~.box .cancel {
     opacity: 1;
 }
 
@@ -82,7 +83,7 @@ body {
     transition: all 0.4s ease;
 }
 
-#check:checked ~ .image-box {
+#check:checked~.image-box {
     bottom: 80px;
 }
 
@@ -107,7 +108,7 @@ body {
 
 .image-box .about {
     position: absolute;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0, 0, 0, 0.35);
     left: 0;
     top: 0;
     height: 100%;
@@ -118,7 +119,7 @@ body {
     transition: all 0.3s ease;
 }
 
-#check:checked ~ .image-box .about {
+#check:checked~.image-box .about {
     opacity: 1;
 }
 

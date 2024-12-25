@@ -128,14 +128,14 @@ li {
     font-size: 24px;
 }
 
-#check:checked ~.sidebar-menu {
+#check:checked~.sidebar-menu {
     left: 0px;
 }
 
-#check:checked ~.btn1 i {
+#check:checked~.btn1 i {
     opacity: 0;
 }
 
-#check:checked ~.btn2 i {
+#check:checked~.btn2 i {
     opacity: 1;
 }

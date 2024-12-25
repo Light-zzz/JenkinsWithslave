@@ -1,7 +1,7 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 10px rgba(0,0,0,0.1);
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .wrapper::before {
@@ -29,7 +29,7 @@ body {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 10px rgba(0,0,0,0.1);
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .wrapper span {
@@ -40,7 +40,7 @@ body {
 }
 
 @keyframes rotate {
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }

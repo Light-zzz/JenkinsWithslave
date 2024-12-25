@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +22,7 @@ body {
     width: 50px;
     border-radius: 50%;
     background: #008ae6;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     animation: animate 1s ease-in-out infinite alternate;
 }
 
@@ -49,6 +49,7 @@ body {
     0% {
         transform: translateY(-10px);
     }
+
     100% {
         transform: translateY(5px);
     }

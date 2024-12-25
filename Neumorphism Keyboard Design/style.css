@@ -26,7 +26,7 @@ body {
     border-radius: 10px;
     padding: 25px;
     background: #dde1e7;
-    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94,104,121,0.288);
+    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 
 .wrapper .keys {
@@ -46,13 +46,13 @@ body {
     color: grey;
     text-transform: uppercase;
     background: #dde1e7;
-    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94,104,121,0.288);
+    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 
 .wrapper .keys input:focus {
     color: #3498db;
     font-size: 19px;
-    box-shadow: inset -3px -3px 7px #ffffff73, inset 2px 2px 5px rgba(94,104,121,0.288);
+    box-shadow: inset -3px -3px 7px #ffffff73, inset 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 
 .wrapper .keys input[value="space"] {

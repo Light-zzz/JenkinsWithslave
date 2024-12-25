@@ -42,7 +42,7 @@ body {
     height: 8px;
     border-radius: 6px;
     margin-top: 6px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .skill-bar .skill-per {
@@ -72,11 +72,12 @@ body {
 }
 
 @keyframes progress {
-    0%{
+    0% {
         width: 0;
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }

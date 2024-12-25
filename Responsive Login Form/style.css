@@ -57,7 +57,7 @@ body {
 
 .row input:focus {
     border-color: #16a085;
-    box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+    box-shadow: inset 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
 }
 
 .row i {
@@ -94,7 +94,7 @@ body {
     font-weight: 500;
     padding-left: 0px;
     background: #16a085;
-    border : 1px solid #16a085;
+    border: 1px solid #16a085;
     cursor: pointer;
 }
 

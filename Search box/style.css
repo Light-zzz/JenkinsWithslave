@@ -31,7 +31,7 @@ body {
     transition: all 0.3s ease;
 }
 
-#check:checked ~.search-box {
+#check:checked~.search-box {
     max-width: 380px;
 }
 
@@ -61,8 +61,8 @@ body {
     border-radius: 25px;
 }
 
-#check:checked ~.search-box .icon {
-    background: #ff6760; 
+#check:checked~.search-box .icon {
+    background: #ff6760;
     color: #fff;
     width: 60px;
     border-radius: 0 23px 25px 0

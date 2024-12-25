@@ -8,7 +8,8 @@
     font-family: "Poppins", sans-serif;
 }
 
-html,body {
+html,
+body {
     display: grid;
     height: 100%;
     place-items: center;
@@ -20,7 +21,7 @@ html,body {
     background: #dde1e7;
     padding: 25px;
     border-radius: 3px;
-    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
 }
 
 .container .pagination {
@@ -32,7 +33,7 @@ html,body {
     flex: 1;
     margin: 0 5px;
     background: #dde1e7;
-    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
 }
 
 .pagination li a {
@@ -46,16 +47,16 @@ html,body {
 }
 
 .pagination li a:focus {
-    box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94,104,121,0.288);
+    box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, 0.288);
     font-size: 17px;
     color: #6f6cde;
 }
 
-.pagination li:first-child a{
+.pagination li:first-child a {
     width: 120px;
 }
 
-.pagination li:last-child a{
+.pagination li:last-child a {
     width: 100px;
 }
 
