@@ -1,17 +1,39 @@
 # HTML & CSS Mini Projects
 
-This repository contains a collection of mini-projects built using HTML and CSS. Each project demonstrates different web design concepts, CSS techniques, and creative UI components. This is part of my ongoing learning process to master front-end development, with a focus on HTML and CSS.
+Welcome to the **HTML & CSS Mini Projects** repository! This collection showcases various mini-projects created to enhance my front-end development skills. Each project explores different aspects of web design, user interface components, and CSS techniques. This is part of my continuous journey to master HTML and CSS.
 
 ## Table of Contents
 
-- [About](#about)
-- [Technologies Used](#technologies-used)
+- [Overview](#overview)
+- [Technologies](#technologies)
+- [Resources](#resources)
 
-## About
+## Overview
 
-The goal of this repository is to practice and improve my web development skills by building a series of small, focused projects. Each project aims to highlight a specific design element or feature, such as animations, layout structures, form designs, or responsive techniques.
+The purpose of this repository is to build, practice, and refine web development skills by creating small, focused projects. Each project demonstrates a unique design feature or technique such as:
 
-## Technologies Used
+- Interactive animations  
+- Responsive layouts  
+- Creative form designs  
+- Hover effects  
+- Neumorphism and glassmorphism UI  
 
-- **HTML5**: Markup language for creating the structure of the projects.
-- **CSS3**: Stylesheet language for styling, animations, and layout design.
+By consistently working on these projects, I aim to gain deeper insights into front-end development and expand my knowledge of modern web design.
+
+## Technologies
+
+The following technologies and tools were used to build the projects:  
+
+- **HTML5**: For structuring the content and elements.  
+- **CSS3**: For styling, layout, and animations.  
+- **VS Code**: As the primary code editor.  
+- **Git**: For version control and project management.
+
+## Why This Project?  
+This repository was created as part of my #100DaysOfCode challenge to improve my front-end skills. Each project reflects the skills I’m building along the way.  
+
+## Resources  
+These are the resources I used to learn and build these projects:  
+
+- [MDN Web Docs (HTML)](https://developer.mozilla.org/en-US/docs/Web/HTML)  
+- [Coding lab YouTube Channel](https://www.youtube.com/@CodingLabYT) 
