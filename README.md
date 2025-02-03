@@ -2,6 +2,8 @@
 
 Welcome to the **HTML & CSS Mini Projects** repository! This collection showcases various mini-projects created to enhance my front-end development skills. Each project explores different aspects of web design, user interface components, and CSS techniques. This is part of my continuous journey to master HTML and CSS.
 
+---
+
 ## Overview
 
 The purpose of this repository is to build, practice, and refine web development skills by creating small, focused projects. Each project demonstrates a unique design feature or technique such as:
@@ -14,6 +16,8 @@ The purpose of this repository is to build, practice, and refine web development
 
 By consistently working on these projects, I aim to gain deeper insights into front-end development and expand my knowledge of modern web design.
 
+---
+
 ## Technologies
 
 The following technologies and tools were used to build the projects:  
@@ -23,9 +27,12 @@ The following technologies and tools were used to build the projects:
 - **VS Code**: As the primary code editor.  
 - **Git**: For version control and project management.
 
+---
+
 ## Projects
 
-### UI Components
+> **UI Components**
+
 1. **Profile Card** – Profile card UI design.
 2. **Profile Card 2** – Another profile card variation.
 3. **Credit Card UI Design** – Interactive credit card design.
@@ -37,7 +44,10 @@ The following technologies and tools were used to build the projects:
 9. **Search Box** – Basic search box UI.
 10. **Share Button Tooltip** – Interactive share button.
 
-### Form Designs
+---
+
+> **Form Designs**
+
 11. **Animated Login Form** – A login form with animations.
 12. **Glassmorphism Login Form** – Login form using glassmorphism.
 13. **Neumorphism Login Form** – Neumorphic-style login form.
@@ -48,7 +58,10 @@ The following technologies and tools were used to build the projects:
 18. **Awesome Custom Radio Buttons** – Custom radio button styles.
 19. **Custom Checkbox** – ON/OFF switch designs.
 
-### Animations & Effects
+---
+
+> **Animations & Effects**
+
 20. **3D Flip Card** – A 3D card that flips on hover.
 21. **Gradient Text Effect** – Gradient color text animation.
 22. **Google Loader** – Loader animation inspired by Google.
@@ -61,7 +74,10 @@ The following technologies and tools were used to build the projects:
 29. **Animated Skills Bar** – Skill progress bars with animations.
 30. **Navigation Links Hover Animation** – Tooltip effect on hover.
 
-### Layouts & Navigation
+---
+
+> **Layouts & Navigation**
+
 31. **Animated Navigation Menu Bar** – A stylish animated navbar.
 32. **Navigation Menu Bar Animation** – Various hover animations for navigation.
 33. **Responsive Pricing Table** – A well-structured pricing table.
@@ -72,8 +88,12 @@ The following technologies and tools were used to build the projects:
 38. **Sidebar Menu** – Interactive sidebar navigation.
 39. **Vertical Tabs** – Vertical tab-based navigation.
 
+---
+
 ## Why This Project?
 This repository was created as part of my #100DaysOfCode challenge to improve my front-end skills. Each project reflects the skills I’m building along the way.
+
+---
 
 ## Resources
 
