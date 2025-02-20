@@ -15,6 +15,14 @@ body {
     background: #ecf0f3;
 }
 
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
 .icons a {
     background: #ecf0f3;
     position: relative;
@@ -24,6 +32,9 @@ body {
     border-radius: 50%;
     display: inline-flex;
     text-decoration: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
     transition: all 0.3s ease;
     box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
 }
@@ -72,4 +83,22 @@ body {
 
 .icons a:nth-child(5) {
     color: #ff0000;
+}
+
+/* responsivness */
+
+@media (max-width: 460px) {
+
+    .icons {
+        width: 350px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .icons {
+        width: 300px;
+        gap: 15px;
+    }
 }

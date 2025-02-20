@@ -79,3 +79,45 @@ h6 {
 .name {
     margin-top: 20px;
 }
+
+/* responsiveness */
+
+@media (max-width: 420px) {
+
+    .container {
+        height: 225px;
+        width: 320px;
+    }
+
+    .card-details {
+        margin-top: 10px;
+    }
+
+    .name {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .container {
+        height: 225px;
+        width: 280px;
+    }
+
+    .card-details {
+        margin-top: 30px;
+    }
+
+    .name {
+        margin-top: 20px;
+    }
+
+    .number {
+        font-size: 16px;
+    }
+
+    .chip {
+        width: 40px;
+    }
+}

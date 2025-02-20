@@ -15,6 +15,11 @@ body {
     background: #ebf5fc;
 }
 
+.button-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
 button {
     height: 70px;
     width: 250px;
@@ -26,6 +31,9 @@ button {
     background: #ebf5fc;
     border-radius: 50px;
     cursor: pointer;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn-1 {
@@ -45,4 +53,14 @@ button {
 .btn-2:focus {
     font-size: 25px;
     box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* responsiveness */
+
+@media (max-width: 630px) {
+
+    .button-wrap {
+        flex-direction: column;
+        gap: 40px;
+    }
 }

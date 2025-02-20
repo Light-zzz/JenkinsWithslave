@@ -54,3 +54,13 @@ body {
         transform: translateY(5px);
     }
 }
+
+/* responsiveness */
+
+@media (max-width: 350px) {
+
+    .wrapper .dot {
+        height: 40px;
+        width: 40px;
+    }
+}

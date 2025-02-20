@@ -105,3 +105,13 @@ body {
     color: #1cc7d0;
     border-color: #1cc7d0;
 }
+
+/* responsiveness */
+
+@media (max-width: 375px) {
+
+    .card {
+        width: 280px;
+        height: 380px;
+    }
+}

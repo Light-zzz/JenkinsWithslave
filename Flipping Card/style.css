@@ -157,3 +157,77 @@ h6 {
     font-size: 8px;
     margin-top: 15px;
 }
+
+/* responsiveness */
+
+@media (max-width: 550px) {
+
+    section::before,
+    section::after {
+        height: 180px;
+        width: 180px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    section::before,
+    section::after {
+        height: 140px;
+        width: 140px;
+    }
+}
+
+@media (max-width: 440px) {
+
+    section::before,
+    section::after {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .container {
+        height: 225px;
+        width: 320px;
+    }
+
+    .card-details {
+        margin-top: 30px;
+    }
+
+    .name {
+        margin-top: 10px;
+    }
+
+    section::before,
+    section::after {
+        display: none;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .container {
+        height: 225px;
+        width: 280px;
+    }
+
+    .card-details {
+        margin-top: 30px;
+    }
+
+    .name {
+        margin-top: 20px;
+    }
+
+    .number {
+        font-size: 16px;
+    }
+
+    .chip {
+        width: 40px;
+    }
+}
