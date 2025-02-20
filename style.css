@@ -48,7 +48,7 @@ nav .heading h2 {
     outline: none;
     -webkit-tap-highlight-color: transparent;
     /* text gradient effect */
-    background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+    background: linear-gradient(135deg, #16C47F 0%, #FFD65A 25%, #FF9D23 50%, #F93827 75%, #FFB22C 100%);
     background-size: 400%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -70,7 +70,7 @@ nav .heading h2 {
     padding: 140px 20px 60px 20px;
 }
 
-/* project box */
+/* project wrap */
 
 .project-wrap {
     display: flex;
@@ -79,6 +79,8 @@ nav .heading h2 {
     flex-wrap: wrap;
     gap: 50px;
 }
+
+/* project box */
 
 .project-box {
     width: 400px;
@@ -102,6 +104,7 @@ nav .heading h2 {
     color: #fff;
     margin-right: 50px;
     font-size: 19px;
+    user-select: none;
 }
 
 .button-wrap {
@@ -131,12 +134,16 @@ footer {
     padding: 40px 30px;
     border-top: 1px solid #fff;
     background: #021526;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .foot-wrap {
     display: flex;
-    justify-content: space-evenly;
     flex-direction: row;
+    gap: 200px;
 }
 
 footer .resources,
@@ -162,7 +169,20 @@ footer .more-links {
     margin-bottom: 5px;
 }
 
+.resources a:hover,
+.more-links a:hover {
+    text-decoration: underline;
+}
+
+.connect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .icons {
+    margin-top: -5px;
     outline: none;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
@@ -202,4 +222,13 @@ footer .more-links {
 .icons a:nth-child(4) i:hover {
     color: #2980b0;
     background: #fff;
+}
+
+.end-text {
+    margin: 40px 0 -10px;
+}
+
+.end-text p {
+    color: #fff;
+    font-size: 18px;
 }
