@@ -89,3 +89,23 @@ body {
     color: #333;
     text-align: center;
 }
+
+/* responsiveness */
+
+@media (max-width: 460px) {
+
+    .container {
+        padding: 20px;
+        max-width: 360px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .container {
+        padding: 15px;
+        max-width: 300px;
+        width: 100%;
+    }
+}

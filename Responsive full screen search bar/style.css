@@ -67,6 +67,7 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+
     .input-box {
         height: 66px;
         margin: 0 8px;
@@ -74,7 +75,7 @@ body {
 
     .input-box i {
         left: 12px;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .input-box input {

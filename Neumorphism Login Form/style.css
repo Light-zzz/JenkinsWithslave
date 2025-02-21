@@ -88,6 +88,9 @@ body {
     font-size: 16px;
     color: #3498db;
     text-decoration: none;
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .forgot:hover a {
@@ -104,6 +107,8 @@ button {
     background: #dde1e7;
     border: none;
     outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
     border-radius: 25px;
     box-shadow: 2px 2px 5px #babecc, -5px -5px 10px #ffffff73;
@@ -123,8 +128,20 @@ button:focus {
 .signup a {
     color: #3498db;
     text-decoration: none;
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .signup a:hover {
     text-decoration: underline;
+}
+
+/* responsiveness */
+
+@media (max-width: 370px) {
+
+    .content {
+        width: 290px;
+    }
 }

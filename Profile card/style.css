@@ -78,6 +78,9 @@ body {
     display: flex;
     align-items: center;
     margin-top: 15px;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .link {
@@ -98,6 +101,9 @@ body {
     display: flex;
     align-items: center;
     margin-top: 25px;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .button {
@@ -138,4 +144,22 @@ body {
 
 .data:last-child {
     border-right: none;
+}
+
+/* responsivness */
+
+@media (max-width: 420px) {
+
+    .profile-card {
+        max-width: 320px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .profile-card {
+        max-width: 290px;
+        width: 100%;
+    }
 }

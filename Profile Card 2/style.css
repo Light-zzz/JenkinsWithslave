@@ -157,3 +157,31 @@ body {
     background: #fff;
     color: #2980b0;
 }
+
+/* responsiveness */
+
+@media (max-width: 480px) {
+
+    .main-box {
+        height: 450px;
+        width: 350px;
+        top: 60%;
+    }
+
+    .content .image-box {
+        bottom: 115px;
+    }
+}
+
+@media (max-width: 410px) {
+
+    .main-box {
+        height: 350px;
+        width: 290px;
+        top: 65%;
+    }
+
+    .content .image-box {
+        bottom: 115px;
+    }
+}
