@@ -7,12 +7,22 @@
     font-family: "Poppins", sans-serif;
 }
 
-html,
-body {
-    overflow-y: auto;
-    overflow-x: hidden;
-    scrollbar-color: #042e53 #021526;
+::-webkit-scrollbar {
+    height: 8px;
     scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-track {
+    background: #021526;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #042e53;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4070f4
 }
 
 /* navbar */
