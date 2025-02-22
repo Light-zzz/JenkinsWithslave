@@ -17,12 +17,14 @@ body {
 }
 
 .container {
-    width: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container .wrapper {
-    min-width: 750px;
-    max-width: 1000px;
+    width: 800px;
     border-radius: 10px;
     padding: 25px;
     background: #dde1e7;
@@ -57,4 +59,123 @@ body {
 
 .wrapper .keys input[value="space"] {
     width: 60%;
+}
+
+/* responsiveness */
+
+@media (max-width: 840px) {
+
+    .container .wrapper {
+        width: 700px;
+    }
+
+    .wrapper .keys input {
+        height: 45px;
+        min-width: 45px;
+        font-size: 18px;
+        margin: 8px;
+    }
+
+    .wrapper .keys input:focus {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 730px) {
+
+    .container .wrapper {
+        width: 600px;
+        padding: 20px;
+    }
+
+    .wrapper .keys input {
+        height: 40px;
+        min-width: 40px;
+        font-size: 16px;
+        margin: 6px;
+        line-height: 18px;
+    }
+
+    .wrapper .keys input:focus {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 630px) {
+
+    .container .wrapper {
+        width: 500px;
+        padding: 15px;
+    }
+
+    .wrapper .keys input {
+        height: 35px;
+        min-width: 35px;
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    .wrapper .keys input:focus {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 530px) {
+
+    .container .wrapper {
+        width: 440px;
+        padding: 10px;
+    }
+
+    .wrapper .keys input {
+        height: 30px;
+        min-width: 30px;
+        font-size: 14px;
+        margin: 6px 4px;
+        line-height: 12px;
+    }
+
+    .wrapper .keys input:focus {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .container .wrapper {
+        width: 360px;
+        padding: 10px;
+    }
+
+    .wrapper .keys input {
+        height: 25px;
+        min-width: 25px;
+        font-size: 13px;
+        margin: 5px 3px;
+        line-height: 6px;
+    }
+
+    .wrapper .keys input:focus {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .container .wrapper {
+        width: 300px;
+        padding: 10px;
+    }
+
+    .wrapper .keys input {
+        height: 25px;
+        min-width: 25px;
+        font-size: 12px;
+        margin: 5px 2px;
+        line-height: 6px;
+    }
+
+    .wrapper .keys input:focus {
+        font-size: 11px;
+    }
 }

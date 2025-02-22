@@ -43,7 +43,6 @@ nav label {
 
 nav label:hover {
     background: rgba(142, 68, 175, 0.3);
-    ;
 }
 
 nav label i {
@@ -87,4 +86,47 @@ nav label i {
 
 input[type="radio"] {
     display: none;
+}
+
+/* responsiveness */
+
+@media (max-width: 650px) {
+
+    nav {
+        width: 530px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    nav {
+        width: 430px;
+    }
+
+    nav label {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    nav {
+        width: 330px;
+    }
+
+    nav span {
+        display: none;
+    }
+
+    nav label {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    nav {
+        width: 290px;
+    }
 }

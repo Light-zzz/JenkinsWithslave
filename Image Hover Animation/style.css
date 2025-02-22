@@ -148,3 +148,124 @@ body {
 .last:hover .details {
     transition-delay: 0s;
 }
+
+/* responsivenss */
+
+@media (max-width: 750px) {
+
+    .hover-image {
+        height: 300px;
+        width: 250px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -170px;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .icon-image {
+        height: 60px;
+        width: 60px;
+    }
+
+    .hover-image {
+        height: 250px;
+        width: 200px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -150px;
+    }
+
+    .details .name {
+        font-size: 16px;
+    }
+
+    .details .job {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .container {
+        margin: -30px 0 0 50px;
+    }
+
+    .icon-image {
+        height: 50px;
+        width: 50px;
+    }
+
+    .hover-image {
+        height: 200px;
+        width: 150px;
+        margin-bottom: -10px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -130px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hidden {
+        display: none;
+    }
+
+    .container {
+        margin: 20% 0 0 50%;
+    }
+
+    .icon-image {
+        height: 50px;
+        width: 50px;
+    }
+
+    .hover-image {
+        height: 250px;
+        width: 200px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -150px;
+    }
+
+    .icon-image {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .container {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .icon-image {
+        height: 50px;
+        width: 50px;
+    }
+
+    .hover-image {
+        height: 200px;
+        width: 150px;
+        margin-bottom: -10px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -130px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .container {
+        margin-left: 15%;
+    }
+}

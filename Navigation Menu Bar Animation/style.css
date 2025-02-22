@@ -29,6 +29,9 @@ nav ul li {
     margin: 0 20px;
     cursor: pointer;
     position: relative;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 nav ul li::after {
@@ -44,4 +47,32 @@ nav ul li::after {
 
 nav ul li:hover::after {
     width: 100%;
+}
+
+/* responsiveness */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 20px;
+    }
+
+    nav ul li {
+        font-size: 1.3rem;
+        padding: 0 5px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav {
+        padding: 15px;
+    }
+
+    nav ul li {
+        font-size: 1rem;
+        padding: 0 2px;
+        margin: 0 5px;
+    }
 }
