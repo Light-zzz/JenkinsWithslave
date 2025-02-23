@@ -33,17 +33,34 @@ nav {
     justify-content: space-evenly;
     flex-direction: row;
     background: #021526;
-    padding: 15px;
+    padding: 15px 30px;
     border-bottom: 1px solid #fff;
     position: fixed;
     width: 100%;
     z-index: 2;
+    height: 80px;
+}
+
+.nav-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav .heading {
+    position: absolute;
+    left: 42%;
 }
 
 nav .heading h2 {
     color: #fff;
+    font-size: 25px;
     font-weight: 600;
-    margin-left: 600px;
+}
+
+.star-btn {
+    position: absolute;
+    right: 30px;
 }
 
 .star-btn button {
@@ -51,7 +68,6 @@ nav .heading h2 {
     font-size: 16px;
     border-radius: 15px;
     cursor: pointer;
-    margin-left: 400px;
     color: #fff;
     border: 1px solid #fff;
     user-select: none;
@@ -80,6 +96,35 @@ nav .heading h2 {
     padding: 140px 20px 60px 20px;
 }
 
+/* back to top button */
+
+.back-to-top {
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+    display: none;
+}
+
+.back-to-top button {
+    padding: 10px;
+    background: #042e53;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 7;
+}
+
+.back-to-top i {
+    color: #fff;
+}
+
+.back-to-top button:hover {
+    background: #4070f4;
+}
+
 /* project wrap */
 
 .project-wrap {
@@ -88,6 +133,7 @@ nav .heading h2 {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
+    overflow-y: auto;
 }
 
 /* project box */
@@ -241,4 +287,235 @@ footer .more-links {
 .end-text p {
     color: #fff;
     font-size: 18px;
+}
+
+/* responsiveness */
+
+@media (max-width: 1200px) {
+
+    /* navbar */
+
+    nav .heading {
+        left: 40%;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    /* footer */
+
+    .foot-wrap {
+        gap: 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    /* footer */
+
+    footer {
+        padding: 30px 20px;
+    }
+
+    .foot-wrap {
+        gap: 80px;
+    }
+
+    .resources .heading h3,
+    .connect .heading h3,
+    .more-links h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .resources a,
+    .more-links a {
+        font-size: 15px;
+    }
+
+    .icons i {
+        height: 35px;
+        width: 35px;
+        line-height: 33px;
+        font-size: 16px;
+    }
+
+    .end-text p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* navbar */
+
+    nav .heading {
+        left: 38%;
+    }
+}
+
+@media (max-width: 850px) {
+
+    /* footer */
+
+    footer {
+        align-items: flex-start;
+        padding: 40px 30px;
+    }
+
+    .foot-wrap {
+        flex-direction: column;
+    }
+
+    .connect {
+        align-items: flex-start;
+    }
+
+    .foot-wrap {
+        gap: 30px;
+    }
+
+    .resources .heading h3,
+    .connect .heading h3,
+    .more-links h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .resources a,
+    .more-links a {
+        font-size: 16px;
+    }
+
+    .icons i {
+        height: 40px;
+        width: 40px;
+        line-height: 38px;
+        font-size: 17px;
+    }
+
+    .end-text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    /* navbar */
+
+    nav .heading {
+        left: 30px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    /* navbar */
+
+    nav {
+        padding: 10px 20px;
+        height: 70px;
+    }
+
+    nav .heading {
+        left: 20px;
+    }
+
+    nav .heading h2 {
+        font-size: 20px;
+    }
+
+    .star-btn {
+        right: 20px;
+    }
+
+    .star-btn button {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    /* navbar */
+
+    nav {
+        padding: 8px 16px;
+    }
+
+    nav .heading {
+        left: 16px;
+    }
+
+    nav .heading h2 {
+        font-size: 18px;
+    }
+
+    .star-btn {
+        right: 16px;
+    }
+
+    .star-btn span {
+        display: none;
+    }
+
+    .star-btn button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    /* footer */
+
+    footer {
+        padding: 30px 20px;
+    }
+
+    .foot-wrap {
+        gap: 20px;
+    }
+
+    .resources .heading h3,
+    .connect .heading h3,
+    .more-links h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .resources a,
+    .more-links a {
+        font-size: 14px;
+    }
+
+    .icons i {
+        height: 35px;
+        width: 35px;
+        line-height: 33px;
+        font-size: 16px;
+    }
+
+    .end-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    /* navbar */
+
+    nav {
+        padding: 6px 14px;
+        height: 60px;
+    }
+
+    nav .heading {
+        left: 14px;
+    }
+
+    nav .heading h2 {
+        font-size: 16px;
+    }
+
+    .star-btn {
+        right: 14px;
+    }
 }
