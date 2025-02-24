@@ -169,6 +169,13 @@ nav .heading h2 {
     margin-top: 10px;
 }
 
+.code-btn,
+.live-btn {
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .code-btn button,
 .live-btn button {
     color: #fff;
@@ -179,9 +186,11 @@ nav .heading h2 {
     border-radius: 10px;
     margin-right: 10px;
     font-size: 15px;
-    user-select: none;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
+}
+
+.code-btn button:hover,
+.live-btn button:hover {
+    background: #052745;
 }
 
 /* footer */
@@ -352,6 +361,12 @@ footer .more-links {
     nav .heading {
         left: 38%;
     }
+
+    /* project wrap */
+
+    .project-wrap {
+        gap: 40px;
+    }
 }
 
 @media (max-width: 850px) {
@@ -433,6 +448,51 @@ footer .more-links {
         font-size: 15px;
         padding: 8px 12px;
     }
+
+    /* container */
+
+    .container {
+        padding-top: 120px;
+    }
+
+    /* project wrap */
+
+    .project-wrap {
+        gap: 30px;
+    }
+
+    /* project-box */
+
+    .project-box {
+        width: 350px;
+    }
+}
+
+@media (max-width: 490px) {
+
+    .back-to-top {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    /* container */
+
+    .container {
+        padding-top: 110px;
+    }
+
+    /* project-box */
+
+    .project-box {
+        width: 300px;
+    }
+
+    .project-box .image img {
+        height: 160px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -462,6 +522,12 @@ footer .more-links {
     .star-btn button {
         font-size: 14px;
         padding: 6px 10px;
+    }
+
+    /* container */
+
+    .container {
+        padding-bottom: 40px;
     }
 
     /* footer */
@@ -517,5 +583,30 @@ footer .more-links {
 
     .star-btn {
         right: 14px;
+    }
+
+    /* footer */
+
+    .foot-wrap {
+        gap: 15px;
+    }
+
+    .end-text {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    /* container */
+
+    .container {
+        padding-top: 100px;
+    }
+
+    /* project-box */
+
+    .project-box {
+        width: 280px;
     }
 }
