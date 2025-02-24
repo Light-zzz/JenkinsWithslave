@@ -1,31 +1,55 @@
-# 🚀 HTML & CSS Mini Projects
+# 🚀 HTML & CSS Mini Projects Website  
 
-Welcome to the **HTML & CSS Mini Projects** repository! 🎨✨ This collection showcases various mini-projects created to enhance my front-end development skills. Each project explores different aspects of web design, user interface components, and CSS techniques. This is part of my continuous journey to master HTML and CSS.
+Welcome to the **HTML & CSS Mini Projects Website!** 🎨✨  
+This website showcases various **mini projects** I created to enhance my front-end development skills. Each project is displayed with an **image preview**, **source code link**, and **live deployment link** for easy access.  
 
----
-
-## 📌 Overview
-
-The purpose of this repository is to build, practice, and refine web development skills by creating small, focused projects. Each project demonstrates a unique design feature or technique such as:
-
-✅ Interactive animations  
-✅ Responsive layouts  
-✅ Creative form designs  
-✅ Hover effects  
-✅ Neumorphism and Glassmorphism UI  
-
-By consistently working on these projects, I aim to gain deeper insights into front-end development and expand my knowledge of modern web design.
+This is part of my continuous journey to master HTML, CSS, and UI/UX design. 🚀  
 
 ---
 
-## Technologies
+## 📌 Overview  
 
-The following technologies and tools were used to build the projects:  
+This website is designed to:  
+✅ Showcase **each project** with a preview image  
+✅ Provide **live deployment links** for direct interaction  
+✅ Offer **source code access** for easy learning  
+✅ Feature **JS animations** with ScrollReveal for smooth effects  
+✅ Ensure **full responsiveness** for all projects  
+✅ Include a **Back-to-Top button** for seamless navigation  
+✅ Have a **footer with useful resources**  
+
+Built to help beginners explore and learn front-end development in an interactive way! 🌱  
+
+---
+
+## 📸 Screenshots
+
+![Mini-Projects](Images/Screenshot.png)
+
+---
+
+## 🌐 Live Demo
+
+The project is live and can be viewed here: [HTML & CSS Mini Projects Website](https://html-css-projects-phi.vercel.app/)
+
+---
+
+## 🛠 Technologies Used  
 
 - **🌍 HTML5** – Structuring web pages  
 - **🎨 CSS3** – Styling, animations, and layouts  
+- **⚡ JavaScript** – Scroll animations and interactions  
+- **📜 ScrollReveal.js** – Smooth animation effects  
 - **🖊️ VS Code** – Primary code editor  
-- **🐙 Git** – Version control and project management
+- **🐙 Git & GitHub** – Version control and hosting  
+
+---
+
+## 📂 Projects Listed  
+
+Each project includes:  
+
+📸 **Image Preview** | 📜 **Code Link** | 🔗 **Live Demo**  
 
 ---
 
@@ -56,37 +80,38 @@ The following technologies and tools were used to build the projects:
 16. **Responsive Contact Us Form** – Contact form with responsive design.
 17. **Email Subscription Box** – Stylish email subscription box.
 18. **Awesome Custom Radio Buttons** – Custom radio button styles.
-19. **Custom Checkbox** – ON/OFF switch designs.
+19. **Custom Radio Buttons** – Custom radio button style 2.
+20. **Custom Checkbox** – ON/OFF switch designs.
 
 ---
 
 > **Animations & Effects**
 
-20. **3D Flip Card** – A 3D card that flips on hover.
-21. **Gradient Text Effect** – Gradient color text animation.
-22. **Google Loader** – Loader animation inspired by Google.
-23. **Simple Loader** – Basic loading animation.
-24. **Loading Animation** – Another creative loading animation.
-25. **Image Hover Animation** – Hover transition using z-index.
-26. **Neumorphism Loading Spinner** – Loading spinner with neumorphic design.
-27. **Image Slider with Clip Animation** – Sliding animation effect.
-28. **Flipping Card** – A card that flips when hovered.
-29. **Animated Skills Bar** – Skill progress bars with animations.
-30. **Navigation Links Hover Animation** – Tooltip effect on hover.
+21. **3D Flip Card** – A 3D card that flips on hover.
+22. **Gradient Text Effect** – Gradient color text animation.
+23. **Google Loader** – Loader animation inspired by Google.
+24. **Simple Loader** – Basic loading animation.
+25. **Loading Animation** – Another creative loading animation.
+26. **Image Hover Animation** – Hover transition using z-index.
+27. **Neumorphism Loading Spinner** – Loading spinner with neumorphic design.
+28. **Image Slider with Clip Animation** – Sliding animation effect.
+29. **Flipping Card** – A card that flips when hovered.
+30. **Animated Skills Bar** – Skill progress bars with animations.
+31. **Navigation Links Hover Animation** – Tooltip effect on hover.
 
 ---
 
 > **Layouts & Navigation**
 
-31. **Animated Navigation Menu Bar** – A stylish animated navbar.
-32. **Navigation Menu Bar Animation** – Various hover animations for navigation.
-33. **Responsive Pricing Table** – A well-structured pricing table.
-34. **Responsive Card Slider** – Card slider with smooth transitions.
-35. **Responsive Full-Screen Search Bar** – Full-screen search interface.
-36. **Glassmorphism Website** – Simple homepage using glassmorphism.
-37. **Simple Website** – A clean homepage layout.
-38. **Sidebar Menu** – Interactive sidebar navigation.
-39. **Vertical Tabs** – Vertical tab-based navigation.
+32. **Animated Navigation Menu Bar** – A stylish animated navbar.
+33. **Navigation Menu Bar Animation** – Various hover animations for navigation.
+34. **Responsive Pricing Table** – A well-structured pricing table.
+35. **Responsive Card Slider** – Card slider with smooth transitions.
+36. **Responsive Full-Screen Search Bar** – Full-screen search interface.
+37. **Glassmorphism Website** – Simple homepage using glassmorphism.
+38. **Simple Website** – A clean homepage layout.
+39. **Sidebar Menu** – Interactive sidebar navigation.
+40. **Vertical Tabs** – Vertical tab-based navigation.
 
 ---
 
