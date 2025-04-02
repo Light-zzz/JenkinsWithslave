@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 body {
@@ -91,6 +92,9 @@ body {
     color: #fff;
     letter-spacing: 1px;
     cursor: pointer;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .wrapper .bottom input[type="submit"]:hover {

@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 body {
@@ -96,6 +97,9 @@ body {
     background: #4C3BCF;
     border: 1px solid #4C3BCF;
     cursor: pointer;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 form .button input:hover {
@@ -111,6 +115,9 @@ form .button input:hover {
 .wrapper form .login a {
     color: #4C3BCF;
     text-decoration: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 form .login a:hover {

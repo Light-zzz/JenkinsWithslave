@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 html,
@@ -98,6 +99,9 @@ body {
     cursor: pointer;
     background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
     transition: all 0.3s ease;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container form .input-box input[type="submit"]:hover {
@@ -124,6 +128,9 @@ body {
     color: #fff;
     line-height: 45px;
     border-radius: 5px;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container .twitter i,

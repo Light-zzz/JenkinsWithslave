@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 body {
@@ -57,6 +58,9 @@ body {
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 0 15px;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .input-box input:focus {
@@ -79,6 +83,12 @@ body {
     margin-bottom: 8px;
 }
 
+.gender {
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .form :where(.gender-option, .gender) {
     display: flex;
     align-items: center;
@@ -93,7 +103,6 @@ body {
 
 .gender input {
     accent-color: rgb(130, 106, 251);
-    ;
 }
 
 .form :where(.gender input, .gender label) {
@@ -129,6 +138,9 @@ body {
     border-radius: 6px;
     transition: all 0.2s ease;
     background-color: rgb(130, 106, 251);
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .form button:hover {

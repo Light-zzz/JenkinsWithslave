@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 body {
@@ -34,6 +35,9 @@ body {
     cursor: pointer;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .main-box label::before {
@@ -100,6 +104,9 @@ body {
     font-size: 22px;
     color: #0984e3;
     transition: all 0.3s ease;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .icons a:hover {

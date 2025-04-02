@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 body {
@@ -35,6 +36,12 @@ body {
     bottom: 0;
     border-radius: 25px;
     cursor: pointer;
+}
+
+.content .box {
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .content .box .share,
@@ -139,6 +146,12 @@ body {
 
 .details .name {
     font-size: 22px;
+}
+
+.details .icons {
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .details .icons i {

@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    user-select: none;
+    overflow: hidden;
 }
 
 body {
@@ -95,6 +97,7 @@ form h2 {
 
 #remember {
     accent-color: #fff;
+    accent-color: #09a3f1;
 }
 
 .password-options label p {
@@ -120,6 +123,9 @@ button {
     border: 2px solid transparent;
     cursor: pointer;
     transition: 0.3s ease;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {

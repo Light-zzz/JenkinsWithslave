@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 body {
@@ -56,6 +57,9 @@ body {
     padding-left: 25px;
     color: #333;
     z-index: 12;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .content .list label:hover {
@@ -141,4 +145,156 @@ body {
 
 .content .text-content p {
     text-align: justify;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+
+    .container {
+        padding: 30px;
+    }
+
+    .container .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .content .list {
+        width: 100%;
+        margin-right: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .content .list label {
+        font-size: 18px;
+        padding: 0 10px 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .content .indicator {
+        height: 50px;
+    }
+
+    .container .content .text-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .container .main-title {
+        font-size: 24px;
+    }
+
+    .content .list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .content .list label {
+        font-size: 16px;
+        height: auto;
+        padding: 8px 12px;
+        line-height: normal;
+    }
+
+    .content .indicator {
+        height: 40px;
+    }
+
+    .content .text-content {
+        margin-top: 30px;
+    }
+
+    .content .text-content .title {
+        font-size: 20px;
+    }
+
+    .content .text-content p {
+        font-size: 14px;
+    }
+
+    #home:checked~.list .indicator {
+        top: 0;
+    }
+
+    #blog:checked~.list .indicator {
+        top: 50px;
+    }
+
+    #help:checked~.list .indicator {
+        top: 100px;
+    }
+
+    #code:checked~.list .indicator {
+        top: 150px;
+    }
+
+    #about:checked~.list .indicator {
+        top: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        margin: 0 10px;
+        padding: 15px;
+    }
+
+    .container .main-title {
+        font-size: 20px;
+    }
+
+    .content .list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content .list label {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .content .text-content {
+        margin-top: 60px;
+    }
+
+    .content .indicator {
+        height: 35px;
+    }
+
+    .container .content .text-content p {
+        font-size: 12px;
+    }
+
+    #home:checked~.list .indicator {
+        top: 0;
+    }
+
+    #blog:checked~.list .indicator {
+        top: 40px;
+    }
+
+    #help:checked~.list .indicator {
+        top: 85px;
+    }
+
+    #code:checked~.list .indicator {
+        top: 128px;
+    }
+
+    #about:checked~.list .indicator {
+        top: 170px;
+    }
 }

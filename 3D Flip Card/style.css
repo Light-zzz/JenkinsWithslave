@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 body {
@@ -98,6 +99,9 @@ body {
     margin: 0 5px;
     border-radius: 50%;
     color: #fff;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .back-face ul a:hover {

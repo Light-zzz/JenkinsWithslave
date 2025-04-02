@@ -60,6 +60,9 @@ body {
     border-radius: 6px;
     background-color: #4070f4;
     cursor: pointer;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .button:hover {
