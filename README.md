@@ -145,7 +145,7 @@ To use these projects locally, follow these steps:
 
 1️⃣ **Clone this repository**  
 ```bash
-git clone https://github.com/your-username/html-css-mini-projects.git
+git clone https://github.com/TonyStark-19/html-css-mini-projects.git
 ```
 
 2️⃣ **Open a project folder and launch the `.html` file in your browser.**
