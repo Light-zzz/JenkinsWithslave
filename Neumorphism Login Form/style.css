@@ -90,7 +90,6 @@ body {
     color: #3498db;
     text-decoration: none;
     outline: none;
-    user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -108,7 +107,6 @@ button {
     background: #dde1e7;
     border: none;
     outline: none;
-    user-select: none;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
     border-radius: 25px;
@@ -130,7 +128,6 @@ button:focus {
     color: #3498db;
     text-decoration: none;
     outline: none;
-    user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 

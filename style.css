@@ -63,7 +63,6 @@ nav .heading h2 {
 /* star button */
 
 .star-btn {
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -112,7 +111,6 @@ nav .heading h2 {
 .back-to-top button {
     padding: 10px;
     background: #042e53;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
     border: 1px solid #fff;
@@ -170,7 +168,6 @@ nav .heading h2 {
     color: #fff;
     margin-right: 50px;
     font-size: 19px;
-    user-select: none;
 }
 
 /* button wrap */
@@ -183,7 +180,6 @@ nav .heading h2 {
 
 .code-btn,
 .live-btn {
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -222,6 +218,7 @@ footer {
 .foot-wrap {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 200px;
 }
 
@@ -248,7 +245,6 @@ footer .more-links {
     margin-bottom: 5px;
     outline: none;
     -webkit-tap-highlight-color: transparent;
-    user-select: none;
 }
 
 .resources a:hover,
@@ -269,11 +265,9 @@ footer .more-links {
     margin-top: -5px;
     outline: none;
     -webkit-tap-highlight-color: transparent;
-    user-select: none;
 }
 
 .icons i {
-    user-select: none;
     text-align: center;
     font-size: 17px;
     color: #fff;
@@ -321,7 +315,7 @@ footer .more-links {
 
 /* responsiveness */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
 
     /* footer */
 
@@ -386,14 +380,12 @@ footer .more-links {
 
     .foot-wrap {
         flex-direction: column;
+        align-items: normal;
+        gap: 30px;
     }
 
     .connect {
         align-items: flex-start;
-    }
-
-    .foot-wrap {
-        gap: 30px;
     }
 
     .resources .heading h3,

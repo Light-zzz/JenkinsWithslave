@@ -79,7 +79,6 @@ body {
     display: flex;
     align-items: center;
     margin-top: 15px;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -102,7 +101,6 @@ body {
     display: flex;
     align-items: center;
     margin-top: 25px;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }

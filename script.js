@@ -1,5 +1,4 @@
 // Animation
-
 const sr = ScrollReveal({
     distance: '65px',
     duration: 1500,
@@ -11,7 +10,6 @@ const sr = ScrollReveal({
 sr.reveal('.project-box', { delay: 50, origin: 'left' });
 
 // back to top button logic
-
 document.addEventListener("DOMContentLoaded", function () {
     const backToTop = document.querySelector('.back-to-top button');
 

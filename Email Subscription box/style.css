@@ -92,7 +92,6 @@ body {
     color: #fff;
     letter-spacing: 1px;
     cursor: pointer;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }

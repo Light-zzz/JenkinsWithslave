@@ -39,7 +39,6 @@ body {
 }
 
 .content .box {
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -149,7 +148,6 @@ body {
 }
 
 .details .icons {
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }

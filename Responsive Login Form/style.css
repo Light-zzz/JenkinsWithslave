@@ -83,7 +83,6 @@ body {
     color: #16a085;
     font-size: 17px;
     text-decoration: none;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -100,7 +99,6 @@ body {
     background: #16a085;
     border: 1px solid #16a085;
     cursor: pointer;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -118,7 +116,6 @@ form .button input:hover {
 .wrapper form .signup a {
     color: #16a085;
     text-decoration: none;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }

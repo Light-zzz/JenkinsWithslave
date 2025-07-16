@@ -35,7 +35,6 @@ body {
 .container p a {
     position: relative;
     text-decoration: none;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }

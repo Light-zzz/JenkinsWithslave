@@ -99,7 +99,6 @@ body {
     margin: 0 5px;
     border-radius: 50%;
     color: #fff;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }

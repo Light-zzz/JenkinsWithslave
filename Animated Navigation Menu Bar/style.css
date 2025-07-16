@@ -39,7 +39,6 @@ nav label {
     z-index: 1;
     cursor: pointer;
     transition: all 0.3s ease;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }

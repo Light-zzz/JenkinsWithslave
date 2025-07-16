@@ -63,7 +63,6 @@ header .navbar .logo a {
     font-weight: 500;
     color: #000;
     text-decoration: none;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -84,7 +83,6 @@ header .navbar .menu {
     font-weight: 500;
     transition: all 0.3s ease;
     margin: 0 5px;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -105,7 +103,6 @@ header .navbar .menu {
     cursor: pointer;
     transition: all 0.3s ease;
     background: linear-gradient(135deg, #f6416c 10%, #ff9a9e 100%);
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }

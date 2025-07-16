@@ -49,7 +49,6 @@ body {
     margin: 10px 0;
     padding-left: 20px;
     cursor: pointer;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
     transition: all 0.3s ease;

@@ -31,7 +31,6 @@ button {
     background: #ebf5fc;
     border-radius: 50px;
     cursor: pointer;
-    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
