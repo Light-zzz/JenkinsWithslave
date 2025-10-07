@@ -5,7 +5,7 @@ pipeline {
         REMOTE_USER = 'ec2-user'
         REMOTE_HOST = '3.109.49.255'
         REMOTE_PATH = '/usr/share/nginx/html'
-        SSH_KEY_ID = 'appVM'
+       // SSH_KEY_ID = 'appVM'
     }
 
     stages {
@@ -29,34 +29,34 @@ pipeline {
             }
         }
 
-        stage('Transfer to Remote VM') {
-            steps {
-                sshagent([SSH_KEY_ID]) {
-                    sh "scp -o StrictHostKeyChecking=no site.tar.gz ${REMOTE_USER}@${REMOTE_HOST}:/tmp/"
+        // stage('Transfer to Remote VM') {
+        //     steps {
+        //         sshagent([SSH_KEY_ID]) {
+        //             sh "scp -o StrictHostKeyChecking=no site.tar.gz ${REMOTE_USER}@${REMOTE_HOST}:/tmp/"
+        //         }
+        //     }
+        // }
+        stage('Deploy on Remote VM') {
+             steps {
+               withCredentials([sshUserPrivateKey(credentialsId: 'appVM', keyFileVariable: 'SSH_KEY')]) {
+                    sh """
+                    # Transfer the archive to the remote VM
+                    scp -i "$SSH_KEY" -o StrictHostKeyChecking=no site.tar.gz ${REMOTE_USER}@${REMOTE_HOST}:/tmp/
+
+                    # Run deployment commands on the remote VM
+                    ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} << 'EOF'
+                        if ! command -v nginx &> /dev/null; then
+                            sudo yum install -y nginx
+                        fi
+
+                        sudo rm -rf ${REMOTE_PATH}/*
+                        sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
+                        sudo systemctl restart nginx
+                    EOF
+                    """
                 }
             }
         }
-
-        stage('Deploy on Remote VM') {
-    steps {
-        sshagent([SSH_KEY_ID]) {
-            sh """
-                ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST}
-                    # Install Nginx only if not present
-                    if ! command -v nginx &> /dev/null; then
-                        sudo yum install -y nginx
-                    fi
-
-                    # Clean old site and deploy new one
-                    sudo rm -rf ${REMOTE_PATH}/*
-                    sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
-
-                    # Restart Nginx
-                    sudo systemctl restart nginx
-            """
-        }
-    }
-}
     }
 }
 // pipeline {
