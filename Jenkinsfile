@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        REMOTE_USER = 'ec2-user'                      // Replace with your VM username
-        REMOTE_HOST = '3.109.49.255'               // Replace with your VM IP
-        REMOTE_PATH = '/usr/share/nginx/html'               // Nginx root path
-        SSH_KEY_ID = 'appVM'               // Jenkins credential ID
+        REMOTE_USER = 'ec2-user'
+        REMOTE_HOST = '3.109.49.255'
+        REMOTE_PATH = '/usr/share/nginx/html'
+        SSH_KEY_ID = 'appVM'
     }
 
     stages {
@@ -13,9 +13,9 @@ pipeline {
             steps {
                 checkout scm
                 sh '''
-                 pwd
-                 whoami
-                 hostname -i
+                    pwd
+                    whoami
+                    hostname -i
                 '''
             }
         }
@@ -23,8 +23,8 @@ pipeline {
         stage('Archive Site') {
             steps {
                 sh '''
-                   rm -f site.tar.gz
-                   tar --exclude=site.tar.gz -czf site.tar.gz *
+                    rm -f site.tar.gz
+                    tar --exclude=site.tar.gz -czf site.tar.gz *
                 '''
             }
         }
@@ -41,12 +41,10 @@ pipeline {
             steps {
                 sshagent([SSH_KEY_ID]) {
                     sh """
-                        #Install Nginx  
-                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} << EOF
-                            sudo yum install nginx -y
+                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} << 'EOF'
+                            sudo yum install -y nginx
                             sudo rm -rf ${REMOTE_PATH}/*
                             sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
-                            #Restart the nginx server
                             sudo systemctl restart nginx
                         EOF
                     """
