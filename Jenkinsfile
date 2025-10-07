@@ -22,7 +22,10 @@ pipeline {
 
         stage('Archive Site') {
             steps {
-                sh 'tar czf site.tar.gz *'
+                sh '''
+                   rm -f site.tar.gz
+                   tar --exclude=site.tar.gz -czf site.tar.gz *
+                '''
             }
         }
 
