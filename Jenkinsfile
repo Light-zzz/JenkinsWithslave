@@ -46,7 +46,7 @@ pipeline {
                             sudo rm -rf ${REMOTE_PATH}/*
                             sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
                             sudo systemctl restart nginx
-                        EOF
+                        'EOF'
                     """
                 }
             }
