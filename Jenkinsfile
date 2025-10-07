@@ -41,7 +41,7 @@ pipeline {
     steps {
         sshagent([SSH_KEY_ID]) {
             sh """
-                ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} << 'EOF'
+                ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST}
                     # Install Nginx only if not present
                     if ! command -v nginx &> /dev/null; then
                         sudo yum install -y nginx
@@ -53,7 +53,6 @@ pipeline {
 
                     # Restart Nginx
                     sudo systemctl restart nginx
-                EOF
             """
         }
     }
