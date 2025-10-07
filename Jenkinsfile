@@ -16,6 +16,7 @@ pipeline {
                     pwd
                     whoami
                     hostname -i
+                    ls -l ${REMOTE_PATH}
                 '''
             }
         }
@@ -38,19 +39,26 @@ pipeline {
         }
 
         stage('Deploy on Remote VM') {
-            steps {
-                sshagent([SSH_KEY_ID]) {
-                    sh """
-                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} << 'EOF'
-                            sudo yum install -y nginx
-                            sudo rm -rf ${REMOTE_PATH}/*
-                            sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
-                            sudo systemctl restart nginx
-                        'EOF'
-                    """
-                }
-            }
+    steps {
+        sshagent([SSH_KEY_ID]) {
+            sh """
+                ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} << 'EOF'
+                    # Install Nginx only if not present
+                    if ! command -v nginx &> /dev/null; then
+                        sudo yum install -y nginx
+                    fi
+
+                    # Clean old site and deploy new one
+                    sudo rm -rf ${REMOTE_PATH}/*
+                    sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
+
+                    # Restart Nginx
+                    sudo systemctl restart nginx
+                EOF
+            """
         }
+    }
+}
     }
 }
 // pipeline {
