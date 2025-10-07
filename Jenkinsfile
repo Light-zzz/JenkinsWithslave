@@ -4,7 +4,7 @@ pipeline {
     environment {
         REMOTE_USER = 'ec2-user'                      // Replace with your VM username
         REMOTE_HOST = '3.109.49.255'               // Replace with your VM IP
-        REMOTE_PATH = '/var/www/html'               // Nginx root path
+        REMOTE_PATH = '/usr/share/nginx/html'               // Nginx root path
         SSH_KEY_ID = 'appVM'               // Jenkins credential ID
     }
 
@@ -41,12 +41,13 @@ pipeline {
             steps {
                 sshagent([SSH_KEY_ID]) {
                     sh """
-                    #Install Nginx  
+                        #Install Nginx  
                         ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} << EOF
                             sudo yum install nginx -y
                             sudo rm -rf ${REMOTE_PATH}/*
                             sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
-                            sudo systemctl reload nginx
+                            #Restart the nginx server
+                            sudo systemctl restart nginx
                         EOF
                     """
                 }
