@@ -42,17 +42,14 @@ pipeline {
                     sh """
                     # Transfer the archive to the remote VM
                     scp -i "$SSH_KEY" -o StrictHostKeyChecking=no site.tar.gz ${REMOTE_USER}@${REMOTE_HOST}:/tmp/
-
                     # Run deployment commands on the remote VM
-                    ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} << 'EOF'
+                    ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST}
                         if ! command -v nginx &> /dev/null; then
                             sudo yum install -y nginx
                         fi
-
                         sudo rm -rf ${REMOTE_PATH}/*
                         sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
                         sudo systemctl restart nginx
-                    EOF
                     """
                 }
             }
