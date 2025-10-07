@@ -38,7 +38,9 @@ pipeline {
             steps {
                 sshagent([SSH_KEY_ID]) {
                     sh """
+                    #Install Nginx  
                         ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} << EOF
+                            sudo yum install nginx -y
                             sudo rm -rf ${REMOTE_PATH}/*
                             sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
                             sudo systemctl reload nginx
