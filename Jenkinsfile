@@ -16,7 +16,6 @@ pipeline {
                     pwd
                     whoami
                     hostname -i
-                    ls -l ${REMOTE_PATH}
                 '''
             }
         }
