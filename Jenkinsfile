@@ -1,12 +1,11 @@
-pipeline{
-  agent any
+pipeline {
+    agent any
 
-  stages{
-    stage('Checking'){
-      step{
-        checkout SCM
-        
-      }
+    stages {
+        stage('Checking') {
+            steps {
+                checkout scm
+            }
+        }
     }
-  }
 }
