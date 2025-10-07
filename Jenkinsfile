@@ -1,13 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        REMOTE_USER = 'ec2-user'
-        REMOTE_HOST = '3.109.49.255'
-        REMOTE_PATH = '/usr/share/nginx/html'
-       // SSH_KEY_ID = 'appVM'
-    }
-
     stages {
         stage('Checkout Code') {
             steps {
@@ -20,36 +13,26 @@ pipeline {
             }
         }
 
-        stage('Archive Site') {
-            steps {
-                sh '''
-                    rm -f site.tar.gz
-                    tar --exclude=site.tar.gz -czf site.tar.gz *
-                '''
-            }
-        }
-
-        // stage('Transfer to Remote VM') {
-        //     steps {
-        //         sshagent([SSH_KEY_ID]) {
-        //             sh "scp -o StrictHostKeyChecking=no site.tar.gz ${REMOTE_USER}@${REMOTE_HOST}:/tmp/"
-        //         }
-        //     }
-        // }
         stage('Deploy on Remote VM') {
-             steps {
-               withCredentials([sshUserPrivateKey(credentialsId: 'appVM', keyFileVariable: 'SSH_KEY')]) {
+            steps {
+                withCredentials([sshUserPrivateKey(credentialsId: 'appVM', keyFileVariable: 'SSH_KEY')]) {
                     sh """
-                    # Transfer the archive to the remote VM
-                    scp -i "$SSH_KEY" -o StrictHostKeyChecking=no site.tar.gz ${REMOTE_USER}@${REMOTE_HOST}:/tmp/
-                    # Run deployment commands on the remote VM
-                    ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST}
-                        if ! command -v nginx &> /dev/null; then
-                            sudo yum install -y nginx
-                        fi
-                        sudo rm -rf ${REMOTE_PATH}/*
-                        sudo tar xzf /tmp/site.tar.gz -C ${REMOTE_PATH}
-                        sudo systemctl restart nginx
+                        # Transfer index.html to remote VM
+                        scp -i "$SSH_KEY" -o StrictHostKeyChecking=no index.html ec2-user@13.235.24.161:/tmp/
+
+                        # Run remote deployment commands
+                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ec2-user@13.235.24.161 << 'EOF'
+                            # Install Nginx if not installed
+                            if ! command -v nginx &> /dev/null; then
+                                sudo dnf install -y nginx
+                            fi
+
+                            # Move index.html to Nginx root
+                            sudo mv /tmp/index.html /usr/share/nginx/html/index.html
+
+                            # Restart Nginx
+                            sudo systemctl restart nginx
+                        EOF
                     """
                 }
             }
