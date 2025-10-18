@@ -1,6 +1,5 @@
 pipeline {
-    agent any
-
+    agent {label : 'Python_slave'}
     stages {
         stage('Checkout Code') {
             steps {
@@ -13,30 +12,30 @@ pipeline {
             }
         }
 
-        stage('Deploy on Remote VM') {
-            steps {
-                withCredentials([sshUserPrivateKey(credentialsId: 'appVM', keyFileVariable: 'SSH_KEY')]) {
-                    sh """
-                        # Transfer index.html to remote VM
-                        scp -i "$SSH_KEY" -o StrictHostKeyChecking=no index.html ec2-user@13.235.24.161:/tmp/
+        // stage('Deploy on Remote VM') {
+        //     steps {
+        //         withCredentials([sshUserPrivateKey(credentialsId: 'appVM', keyFileVariable: 'SSH_KEY')]) {
+        //             sh """
+        //                 # Transfer index.html to remote VM
+        //                 scp -i "$SSH_KEY" -o StrictHostKeyChecking=no index.html ec2-user@13.235.24.161:/tmp/
 
-                        # Run remote deployment commands
-                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ec2-user@13.235.24.161 << 'EOF'
-                            # Install Nginx if not installed
-                            if ! command -v nginx &> /dev/null; then
-                                sudo dnf install -y nginx
-                            fi
+        //                 # Run remote deployment commands
+        //                 ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ec2-user@13.235.24.161 << 'EOF'
+        //                     # Install Nginx if not installed
+        //                     if ! command -v nginx &> /dev/null; then
+        //                         sudo dnf install -y nginx
+        //                     fi
 
-                            # Move index.html to Nginx root
-                            sudo mv /tmp/index.html /usr/share/nginx/html/index.html
+        //                     # Move index.html to Nginx root
+        //                     sudo mv /tmp/index.html /usr/share/nginx/html/index.html
 
-                            # Restart Nginx
-                            sudo systemctl restart nginx
-                        EOF
-                    """
-                }
-            }
-        }
+        //                     # Restart Nginx
+        //                     sudo systemctl restart nginx
+        //                 EOF
+        //             """
+        //         }
+        //     }
+        // }
     }
 }
 // pipeline {
