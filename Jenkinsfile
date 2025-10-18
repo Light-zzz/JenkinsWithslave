@@ -12,30 +12,24 @@ pipeline {
             }
         }
 
-        // stage('Deploy on Remote VM') {
-        //     steps {
-        //         withCredentials([sshUserPrivateKey(credentialsId: 'appVM', keyFileVariable: 'SSH_KEY')]) {
-        //             sh """
-        //                 # Transfer index.html to remote VM
-        //                 scp -i "$SSH_KEY" -o StrictHostKeyChecking=no index.html ec2-user@13.235.24.161:/tmp/
-
-        //                 # Run remote deployment commands
-        //                 ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ec2-user@13.235.24.161 << 'EOF'
-        //                     # Install Nginx if not installed
-        //                     if ! command -v nginx &> /dev/null; then
-        //                         sudo dnf install -y nginx
-        //                     fi
-
-        //                     # Move index.html to Nginx root
-        //                     sudo mv /tmp/index.html /usr/share/nginx/html/index.html
-
-        //                     # Restart Nginx
-        //                     sudo systemctl restart nginx
-        //                 EOF
-        //             """
-        //         }
-        //     }
-        // }
+        stage('Deploy on Remote VM') {
+            steps {
+                withCredentials([sshUserPrivateKey(credentialsId: 'Python_Web', keyFileVariable: 'SSH_KEY')]) {
+                    sh """
+                       # Copy file
+                       scp -i "$SSH_KEY" -o StrictHostKeyChecking=no index.html script.js style.css ubuntu@13.233.215.170:/tmp/
+                        # Install nginx in ubuntu
+                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@13.233.215.170 "sudo apt install nginx -y && sudo systemctl enable nginx"
+                        # Move and restart nginx
+                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@13.233.215.170 "sudo mv /tmp/index.html /var/www/html/index.html"
+                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@13.233.215.170 "sudo mv /tmp/script.js /var/www/html/script.js"
+                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@13.233.215.170 "sudo mv /tmp/style.css /var/www/html/style.css"
+                        # Enable and Start the ngnix
+                        sudo systemctl start nginx
+                    """
+                }
+            }
+        }
     }
 }
 // pipeline {
@@ -68,7 +62,7 @@ pipeline {
 //                         ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ec2-user@13.235.24.161 "sudo mv /tmp/index.html /usr/share/nginx/html/index.html"
 //                         ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ec2-user@13.235.24.161 "sudo mv /tmp/index.html /usr/share/nginx/html/index.html"
 //                         ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ec2-user@13.235.24.161 "sudo mv /tmp/index.html /usr/share/nginx/html/index.html"
-//                         sudo systemctl restart nginx
+//                         sudo systemctl enable nginx && sudo systemctl start nginx
 //                     '''
 //                 }
 //             }
