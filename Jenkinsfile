@@ -17,16 +17,13 @@ pipeline {
                 withCredentials([sshUserPrivateKey(credentialsId: 'webapp', keyFileVariable: 'SSH_KEY')]) {
                     sh """
                        # Copy file
-                       scp -i "$SSH_KEY" -o StrictHostKeyChecking=no **/*.html script.js **/*.css **/*.png **/*.jpeg **/*.jpg ubuntu@43.205.142.50:/tmp/
+                       scp -i "$SSH_KEY" -o StrictHostKeyChecking=no index.html script.js style.css ubuntu@43.205.142.50:/tmp/
                         # Install nginx in ubuntu
                         ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo apt install nginx -y && sudo systemctl enable nginx"
                         # Move and restart nginx
-                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo mv /tmp/**/*.html /var/www/html/**/*.html"
-                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo mv /tmp/.js /var/www/html/.js"
-                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo mv /tmp/**/*.css /var/www/html/**/*.css"
-                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo mv /tmp/**/*.png /var/www/html/**/*.png"
-                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo mv /tmp/**/*.jpg /var/www/html/**/*.jpg"
-                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo mv /tmp/**/*.jpeg /var/www/html/**/*.jpeg"
+                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo mv /tmp/index.html /var/www/html/index.html"
+                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo mv /tmp/script.js /var/www/html/script.js"
+                        ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no ubuntu@43.205.142.50 "sudo mv /tmp/style.css /var/www/html/style.css"
                         # Enable and Start the ngnix
                         sudo systemctl start nginx
                     """
