@@ -1,5 +1,5 @@
 pipeline {
-    agent {label : 'Python_slave'}
+    agent {label : 'Python_web'}
     stages {
         stage('Checkout Code') {
             steps {
